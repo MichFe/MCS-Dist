@@ -95,9 +95,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
 /* harmony import */ var _pages_pages_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/pages.module */ "./src/app/pages/pages.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _login_register_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login/register.component */ "./src/app/login/register.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -110,6 +111,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 //Modulos
 
+
 //Components
 
 
@@ -119,18 +121,19 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"],
-                _login_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"]
-            ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _app_routes__WEBPACK_IMPORTED_MODULE_2__["APP_ROUTES"],
-                _pages_pages_module__WEBPACK_IMPORTED_MODULE_3__["PagesModule"]
+                _pages_pages_module__WEBPACK_IMPORTED_MODULE_3__["PagesModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"]
+            ],
+            declarations: [
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"],
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -152,18 +155,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "APP_ROUTES", function() { return APP_ROUTES; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _login_register_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./login/register.component */ "./src/app/login/register.component.ts");
-/* harmony import */ var _shared_nopagefound_nopagefound_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shared/nopagefound/nopagefound.component */ "./src/app/shared/nopagefound/nopagefound.component.ts");
-
+/* harmony import */ var _shared_nopagefound_nopagefound_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/nopagefound/nopagefound.component */ "./src/app/shared/nopagefound/nopagefound.component.ts");
 
 
 
 var appRoutes = [
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] },
-    { path: 'register', component: _login_register_component__WEBPACK_IMPORTED_MODULE_2__["RegisterComponent"] },
-    { path: '**', component: _shared_nopagefound_nopagefound_component__WEBPACK_IMPORTED_MODULE_3__["NopagefoundComponent"] }
+    { path: '**', component: _shared_nopagefound_nopagefound_component__WEBPACK_IMPORTED_MODULE_2__["NopagefoundComponent"] }
 ];
 var APP_ROUTES = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes, { useHash: false });
+
+
+/***/ }),
+
+/***/ "./src/app/config/config.ts":
+/*!**********************************!*\
+  !*** ./src/app/config/config.ts ***!
+  \**********************************/
+/*! exports provided: URL_SERVICIOS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "URL_SERVICIOS", function() { return URL_SERVICIOS; });
+var URL_SERVICIOS = 'https://api.moblacore.com';
 
 
 /***/ }),
@@ -175,7 +190,7 @@ var APP_ROUTES = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].fo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*\nTemplate Name: Admin pro Admin\nAuthor: Wrappixel\nEmail: niravjoshi87@gmail.com\nFile: scss\n*/\n/*\nTemplate Name: Admin Pro Admin\nAuthor: Wrappixel\nEmail: niravjoshi87@gmail.com\nFile: scss\n*/\n/*Theme Colors*/\n/*bootstrap Color*/\n/*Light colors*/\n/*Normal Color*/\n/*Extra Variable*/\n/*******************\nLogin register and recover password Page\n******************/\n.login-register {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center;\n  height: 100%;\n  width: 100%;\n  padding: 10% 0;\n  position: fixed; }\n.login-box {\n  width: 400px;\n  margin: 0 auto; }\n.login-box .footer {\n    width: 100%;\n    left: 0px;\n    right: 0px; }\n.login-box .social {\n    display: block;\n    margin-bottom: 30px; }\n#recoverform {\n  display: none; }\n.login-sidebar {\n  padding: 0px;\n  margin-top: 0px; }\n.login-sidebar .login-box {\n    right: 0px;\n    position: absolute;\n    height: 100%; }\n"
+module.exports = "/*\nTemplate Name: Admin pro Admin\nAuthor: Wrappixel\nEmail: niravjoshi87@gmail.com\nFile: scss\n*/\n/*\nTemplate Name: Admin Pro Admin\nAuthor: Wrappixel\nEmail: niravjoshi87@gmail.com\nFile: scss\n*/\n/*Theme Colors*/\n/*bootstrap Color*/\n/*Light colors*/\n/*Normal Color*/\n/*Extra Variable*/\n/*******************\nLogin register and recover password Page\n******************/\n.login-register {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center;\n  height: 100%;\n  width: 100%;\n  padding: 10% 0;\n  position: fixed; }\n.login-box {\n  width: 400px;\n  margin: 0 auto; }\n.login-box .footer {\n    width: 100%;\n    left: 0px;\n    right: 0px; }\n.login-box .social {\n    display: block;\n    margin-bottom: 30px; }\n#recoverform {\n  display: none; }\n.login-sidebar {\n  padding: 0px;\n  margin-top: 0px; }\n.login-sidebar .login-box {\n    right: 0px;\n    position: absolute;\n    height: 100%; }\n.logo{\n  width: 150px;\n}\n.btn-mobla{\n  background-color: #278395;\n  border: 1px solid #278395;\n}\n[type=\"checkbox\"].filled-in:checked.chk-col-light-blue + label:after {\n    border: 2px solid #278395;\n    background-color: #278395;\n}\n.form-material \n.form-control, \n.form-material .form-control.focus, \n.form-material .form-control:focus {\n    background-image: linear-gradient(#278395, #278395), linear-gradient(#e9edf2, #e9edf2);\n}"
 
 /***/ }),
 
@@ -186,7 +201,7 @@ module.exports = "/*\nTemplate Name: Admin pro Admin\nAuthor: Wrappixel\nEmail: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- ============================================================== -->\n<!-- Main wrapper - style you can find in pages.scss -->\n<!-- ============================================================== -->\n<section id=\"wrapper\" class=\"login-register login-sidebar\" style=\"background-image:url(assets/images/background/login-register.jpg);\">\n  <div class=\"login-box card\">\n    <div class=\"card-body\">\n      <form class=\"form-horizontal form-material\" id=\"loginform\" action=\"index.html\">\n        <a href=\"javascript:void(0)\" class=\"text-center db\"><img src=\"assets/images/logo-icon.png\" alt=\"Home\" /><br/><img\n            src=\"assets/images/logo-text.png\" alt=\"Home\" /></a>\n        <div class=\"form-group m-t-40\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"text\" required=\"\" placeholder=\"Nombre de usuario\">\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"password\" required=\"\" placeholder=\"Contraseña\">\n          </div>\n        </div>\n        <div class=\"form-group row\">\n          <div class=\"col-md-12\">\n            <div class=\"checkbox checkbox-primary pull-left p-t-0\">\n              <input id=\"checkbox-signup\" type=\"checkbox\" class=\"filled-in chk-col-light-blue\">\n              <label for=\"checkbox-signup\"> Recordarme </label>\n            </div>\n            <a href=\"javascript:void(0)\" id=\"to-recover\" class=\"text-dark pull-right\"><i class=\"fa fa-lock m-r-5\"></i> Olvidó\n              su contraseña?</a> </div>\n        </div>\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-info btn-lg btn-block text-uppercase btn-rounded\" type=\"submit\">Log In</button>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-xs-12 col-sm-12 col-md-12 m-t-10 text-center\">\n            <div class=\"social\">\n              <a href=\"javascript:void(0)\" \n                 class=\"btn btn-facebook\" \n                 data-toggle=\"tooltip\" \n                 title=\"Login with Facebook\">\n                <i aria-hidden=\"true\" class=\"fa fa-facebook\"></i>\n             </a>\n             &nbsp;\n             <a href=\"javascript:void(0)\" \n                class=\"btn btn-googleplus\"\n                data-toggle=\"tooltip\" \n                title=\"Login with Google\">\n                  <i aria-hidden=\"true\" class=\"fa fa-google-plus\"></i>\n              </a>\n              </div>\n          </div>\n        </div>\n        <div class=\"form-group m-b-0\">\n          <div class=\"col-sm-12 text-center\">\n            Aún no tiene una cuenta? <a href=\"pages-register2.html\" class=\"text-primary m-l-5\"><b>Registrarse</b></a>\n          </div>\n        </div>\n      </form>\n      <form class=\"form-horizontal\" id=\"recoverform\" action=\"index.html\">\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <h3>Recuperar Contraseña</h3>\n            <p class=\"text-muted\">Ingresa tu Email y te enviaremos las instrucciones!</p>\n          </div>\n        </div>\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"text\" required=\"\" placeholder=\"Email\">\n          </div>\n        </div>\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light\" type=\"submit\">Reset</button>\n          </div>\n        </div>\n      </form>\n    </div>\n  </div>\n</section>\n<!-- ============================================================== -->\n<!-- End Wrapper -->\n<!-- ============================================================== -->"
+module.exports = "<!-- ============================================================== -->\n<!-- Main wrapper - style you can find in pages.scss -->\n<!-- ============================================================== -->\n\n<!-- ============================================================== -->\n<!-- Imagen de background para el Login -->\n<!-- ============================================================== -->\n<section id=\"wrapper\" \n         class=\"login-register login-sidebar\" \n         style=\"background-image:url(assets/images/background/login-register.jpg);\">\n<!-- ============================================================== -->\n<!-- FIN de Imagen de background para el Login -->\n<!-- ============================================================== -->\n \n  <div class=\"login-box card\">\n    <div class=\"card-body\">\n      \n      <!-- ============================================================== -->\n      <!-- Logo de la empresa para el Login -->\n      <!-- ============================================================== -->\n      <div class=\"text-center p-t-20\">\n        <img\n            class=\"logo\"\n            src=\"assets/images/mobla-logo.png\" alt=\"Home\">\n      </div>\n      <!-- ============================================================== -->\n      <!-- FIN de Logo de la empresa para el Login -->\n      <!-- ============================================================== -->\n\n      <!-- ============================================================== -->\n      <!-- Formulario de login -->\n      <!-- ============================================================== -->\n      <form ngNativeValidate \n            #forma=\"ngForm\" \n            class=\"form-horizontal form-material\" \n            (ngSubmit)=\"login( forma )\" \n            id=\"loginform\" \n            action=\"index.html\">\n        \n        <!-- ============================================================== -->\n        <!-- Campo email del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group m-t-40\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" \n                   type=\"email\"\n                   placeholder=\"Correo del usuario\" \n                   required\n                   ngModel\n                   name=\"email\">\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Campo email del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Campo contraseña del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\"\n                   type=\"password\" \n                   placeholder=\"Contraseña\" \n                   required\n                   ngModel\n                   name=\"password\">\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Campo contraseña del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Check box para recordar contraseña -->\n        <!-- ============================================================== -->\n        <div class=\"form-group row\">\n          <div class=\"col-md-12\">\n\n            <div class=\"checkbox checkbox-primary pull-left p-t-0\">\n              <input id=\"checkbox-signup\" \n                     type=\"checkbox\" \n                     class=\"filled-in chk-col-light-blue\"\n                     [(ngModel)]=\"recordarPassword\"\n                     name=\"recordarPassword\">\n              <label for=\"checkbox-signup\"> Recordarme </label>\n            </div>\n\n            <a href=\"javascript:void(0)\" id=\"to-recover\" class=\"text-dark pull-right\">\n              <i class=\"fa fa-lock m-r-5\"></i> \n              Olvidó su contraseña?</a>\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Check box para recordar contraseña -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Botón submit del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-info btn-lg btn-block text-uppercase btn-rounded btn-mobla\" \n                    type=\"submit\">Log In</button>\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Botón submit del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- <div class=\"form-group m-b-0\">\n          <div class=\"col-sm-12 text-center\">\n            Aún no tiene una cuenta? <a href=\"pages-register2.html\" class=\"text-primary m-l-5\"><b>Registrarse</b></a>\n          </div>\n        </div> -->\n      \n      </form>\n      <!-- ============================================================== -->\n      <!-- FIN de Formulario de login -->\n      <!-- ============================================================== -->\n\n      <form class=\"form-horizontal\" id=\"recoverform\" action=\"index.html\">\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <h3>Recuperar Contraseña</h3>\n            <p class=\"text-muted\">Ingresa tu Email y te enviaremos las instrucciones!</p>\n          </div>\n        </div>\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"text\" required=\"\" placeholder=\"Email\">\n          </div>\n        </div>\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light\" type=\"submit\">Reset</button>\n          </div>\n        </div>\n      </form>\n\n    </div>\n  </div>\n</section>\n<!-- ============================================================== -->\n<!-- End Wrapper -->\n<!-- ============================================================== -->"
 
 /***/ }),
 
@@ -201,6 +216,8 @@ module.exports = "<!-- =========================================================
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/usuarios/usuario.service */ "./src/app/services/usuarios/usuario.service.ts");
+/* harmony import */ var _models_usuario_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/usuario.model */ "./src/app/models/usuario.model.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -211,17 +228,35 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent() {
+    function LoginComponent(_usuarioService) {
+        this._usuarioService = _usuarioService;
+        this.recordarPassword = false;
     }
     LoginComponent.prototype.ngOnInit = function () { };
+    LoginComponent.prototype.login = function (forma) {
+        //Validando que la forma sea válida
+        if (forma.invalid) {
+            return;
+        }
+        //
+        var usuario = new _models_usuario_model__WEBPACK_IMPORTED_MODULE_2__["Usuario"](null, forma.value.email, forma.value.password);
+        this._usuarioService.login(usuario, forma.value.recordarPassword).
+            subscribe(function (resp) {
+            console.log(resp);
+        });
+        console.log(forma.valid);
+        console.log(forma.value);
+    };
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "app-login",
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_1__["UsuarioService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -230,51 +265,26 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/login/register.component.html":
-/*!***********************************************!*\
-  !*** ./src/app/login/register.component.html ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- ============================================================== -->\n<!-- Main wrapper - style you can find in pages.scss -->\n<!-- ============================================================== -->\n<section id=\"wrapper\" class=\"login-register login-sidebar\" style=\"background-image:url(assets/images/background/login-register.jpg);\">\n  <div class=\"login-box card\">\n    <div class=\"card-body\">\n      <form class=\"form-horizontal form-material\" id=\"loginform\" action=\"index.html\">\n        <a href=\"javascript:void(0)\" class=\"text-center db\"><img src=\"assets/images/logo-icon.png\" alt=\"Home\" /><br/><img\n            src=\"assets/images/logo-text.png\" alt=\"Home\" /></a>\n        <h3 class=\"box-title m-t-40 m-b-0\">Registrate ahora</h3><small>Crea tu cuenta y disfruta</small>\n        <div class=\"form-group m-t-20\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"text\" required=\"\" placeholder=\"Nombre\">\n          </div>\n        </div>\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"text\" required=\"\" placeholder=\"Email\">\n          </div>\n        </div>\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"password\" required=\"\" placeholder=\"Contraseña\">\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"password\" required=\"\" placeholder=\"Confirma Contraseña\">\n          </div>\n        </div>\n        <div class=\"form-group row\">\n          <div class=\"col-md-12\">\n            <div class=\"checkbox checkbox-primary p-t-0\">\n              <input id=\"checkbox-signup\" type=\"checkbox\">\n              <label for=\"checkbox-signup\"> Acepto todos los <a href=\"#\">Términos</a></label>\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light\" type=\"submit\">Registrar</button>\n          </div>\n        </div>\n        <div class=\"form-group m-b-0\">\n          <div class=\"col-sm-12 text-center\">\n            <p>Ya tienes una cuenta? <a href=\"pages-login-2.html\" class=\"text-info m-l-5\"><b>Ingresa</b></a></p>\n          </div>\n        </div>\n      </form>\n    </div>\n  </div>\n</section>\n<!-- ============================================================== -->\n<!-- End Wrapper -->\n<!-- ============================================================== -->"
-
-/***/ }),
-
-/***/ "./src/app/login/register.component.ts":
-/*!*********************************************!*\
-  !*** ./src/app/login/register.component.ts ***!
-  \*********************************************/
-/*! exports provided: RegisterComponent */
+/***/ "./src/app/models/usuario.model.ts":
+/*!*****************************************!*\
+  !*** ./src/app/models/usuario.model.ts ***!
+  \*****************************************/
+/*! exports provided: Usuario */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent() {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Usuario", function() { return Usuario; });
+var Usuario = /** @class */ (function () {
+    function Usuario(nombre, email, password, role, img, _id) {
+        this.nombre = nombre;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.img = img;
+        this._id = _id;
     }
-    RegisterComponent.prototype.ngOnInit = function () { };
-    RegisterComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: "app-register",
-            template: __webpack_require__(/*! ./register.component.html */ "./src/app/login/register.component.html"),
-            styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], RegisterComponent);
-    return RegisterComponent;
+    return Usuario;
 }());
 
 
@@ -1795,23 +1805,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PagesModule", function() { return PagesModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/locales/es-MX */ "./node_modules/@angular/common/locales/es-MX.js");
-/* harmony import */ var _angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _pages_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages.component */ "./src/app/pages/pages.component.ts");
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/pages/dashboard/dashboard.component.ts");
-/* harmony import */ var _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./graficas1/graficas1.component */ "./src/app/pages/graficas1/graficas1.component.ts");
-/* harmony import */ var _progress_progress_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./progress/progress.component */ "./src/app/pages/progress/progress.component.ts");
-/* harmony import */ var _crm_crm_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./crm/crm.component */ "./src/app/pages/crm/crm.component.ts");
-/* harmony import */ var _modal_modal_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modal/modal.component */ "./src/app/pages/modal/modal.component.ts");
-/* harmony import */ var _modal_info_client_info_client_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modal/info-client/info-client.component */ "./src/app/pages/modal/info-client/info-client.component.ts");
-/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
-/* harmony import */ var _pages_routes__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages.routes */ "./src/app/pages/pages.routes.ts");
-/* harmony import */ var _modal_nuevo_cliente_nuevo_cliente_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modal/nuevo-cliente/nuevo-cliente.component */ "./src/app/pages/modal/nuevo-cliente/nuevo-cliente.component.ts");
-/* harmony import */ var _modal_cotizacion_cotizacion_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modal/cotizacion/cotizacion.component */ "./src/app/pages/modal/cotizacion/cotizacion.component.ts");
-/* harmony import */ var _calendario_calendario_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./calendario/calendario.component */ "./src/app/pages/calendario/calendario.component.ts");
-/* harmony import */ var _pipes_mes_pipe__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pipes/mes.pipe */ "./src/app/pipes/mes.pipe.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/locales/es-MX */ "./node_modules/@angular/common/locales/es-MX.js");
+/* harmony import */ var _angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _pipes_mes_pipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pipes/mes.pipe */ "./src/app/pipes/mes.pipe.ts");
+/* harmony import */ var _pages_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages.component */ "./src/app/pages/pages.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/pages/dashboard/dashboard.component.ts");
+/* harmony import */ var _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./graficas1/graficas1.component */ "./src/app/pages/graficas1/graficas1.component.ts");
+/* harmony import */ var _progress_progress_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./progress/progress.component */ "./src/app/pages/progress/progress.component.ts");
+/* harmony import */ var _crm_crm_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./crm/crm.component */ "./src/app/pages/crm/crm.component.ts");
+/* harmony import */ var _calendario_calendario_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./calendario/calendario.component */ "./src/app/pages/calendario/calendario.component.ts");
+/* harmony import */ var _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
+/* harmony import */ var _modal_modal_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modal/modal.component */ "./src/app/pages/modal/modal.component.ts");
+/* harmony import */ var _modal_info_client_info_client_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modal/info-client/info-client.component */ "./src/app/pages/modal/info-client/info-client.component.ts");
+/* harmony import */ var _modal_cotizacion_cotizacion_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modal/cotizacion/cotizacion.component */ "./src/app/pages/modal/cotizacion/cotizacion.component.ts");
+/* harmony import */ var _modal_nuevo_cliente_nuevo_cliente_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modal/nuevo-cliente/nuevo-cliente.component */ "./src/app/pages/modal/nuevo-cliente/nuevo-cliente.component.ts");
 /* harmony import */ var _modal_nuevo_evento_nuevo_evento_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modal/nuevo-evento/nuevo-evento.component */ "./src/app/pages/modal/nuevo-evento/nuevo-evento.component.ts");
+/* harmony import */ var _pages_routes__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages.routes */ "./src/app/pages/pages.routes.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1820,11 +1831,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 
+//Modulos
+
 
 //Locales
 
-Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["registerLocaleData"])(_angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_3___default.a, "es-Mx");
+Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["registerLocaleData"])(_angular_common_locales_es_MX__WEBPACK_IMPORTED_MODULE_4___default.a, "es-Mx");
+//Pipes
+
 //Pages
+
+
 
 
 
@@ -1836,9 +1853,7 @@ Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["registerLocaleData"])(_angu
 
 
 
-
-
-
+//Routes
 
 var PagesModule = /** @class */ (function () {
     function PagesModule() {
@@ -1847,32 +1862,33 @@ var PagesModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                _shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-                _pages_routes__WEBPACK_IMPORTED_MODULE_12__["PAGES_ROUTES"]
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_2__["SharedModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _pages_routes__WEBPACK_IMPORTED_MODULE_18__["PAGES_ROUTES"]
             ],
             providers: [
                 { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], useValue: 'es-Mx' }
             ],
             declarations: [
-                _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"],
-                _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_6__["Graficas1Component"],
-                _progress_progress_component__WEBPACK_IMPORTED_MODULE_7__["ProgressComponent"],
-                _pages_component__WEBPACK_IMPORTED_MODULE_4__["PagesComponent"],
-                _crm_crm_component__WEBPACK_IMPORTED_MODULE_8__["CrmComponent"],
-                _modal_modal_component__WEBPACK_IMPORTED_MODULE_9__["ModalComponent"],
-                _modal_info_client_info_client_component__WEBPACK_IMPORTED_MODULE_10__["InfoClientComponent"],
-                _modal_nuevo_cliente_nuevo_cliente_component__WEBPACK_IMPORTED_MODULE_13__["NuevoClienteComponent"],
-                _modal_cotizacion_cotizacion_component__WEBPACK_IMPORTED_MODULE_14__["CotizacionComponent"],
-                _calendario_calendario_component__WEBPACK_IMPORTED_MODULE_15__["CalendarioComponent"],
-                _pipes_mes_pipe__WEBPACK_IMPORTED_MODULE_16__["MesPipe"],
-                _modal_nuevo_evento_nuevo_evento_component__WEBPACK_IMPORTED_MODULE_17__["NuevoEventoComponent"]
+                _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"],
+                _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_8__["Graficas1Component"],
+                _progress_progress_component__WEBPACK_IMPORTED_MODULE_9__["ProgressComponent"],
+                _pages_component__WEBPACK_IMPORTED_MODULE_6__["PagesComponent"],
+                _crm_crm_component__WEBPACK_IMPORTED_MODULE_10__["CrmComponent"],
+                _modal_modal_component__WEBPACK_IMPORTED_MODULE_13__["ModalComponent"],
+                _modal_info_client_info_client_component__WEBPACK_IMPORTED_MODULE_14__["InfoClientComponent"],
+                _modal_nuevo_cliente_nuevo_cliente_component__WEBPACK_IMPORTED_MODULE_16__["NuevoClienteComponent"],
+                _modal_cotizacion_cotizacion_component__WEBPACK_IMPORTED_MODULE_15__["CotizacionComponent"],
+                _calendario_calendario_component__WEBPACK_IMPORTED_MODULE_11__["CalendarioComponent"],
+                _pipes_mes_pipe__WEBPACK_IMPORTED_MODULE_5__["MesPipe"],
+                _modal_nuevo_evento_nuevo_evento_component__WEBPACK_IMPORTED_MODULE_17__["NuevoEventoComponent"],
+                _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_12__["UsuariosComponent"]
             ],
             exports: [
-                _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"],
-                _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_6__["Graficas1Component"],
-                _progress_progress_component__WEBPACK_IMPORTED_MODULE_7__["ProgressComponent"],
-                _pages_component__WEBPACK_IMPORTED_MODULE_4__["PagesComponent"]
+                _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"],
+                _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_8__["Graficas1Component"],
+                _progress_progress_component__WEBPACK_IMPORTED_MODULE_9__["ProgressComponent"],
+                _pages_component__WEBPACK_IMPORTED_MODULE_6__["PagesComponent"]
             ]
         })
     ], PagesModule);
@@ -1900,6 +1916,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./graficas1/graficas1.component */ "./src/app/pages/graficas1/graficas1.component.ts");
 /* harmony import */ var _crm_crm_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./crm/crm.component */ "./src/app/pages/crm/crm.component.ts");
 /* harmony import */ var _calendario_calendario_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./calendario/calendario.component */ "./src/app/pages/calendario/calendario.component.ts");
+/* harmony import */ var _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
+
 
 
 
@@ -1917,6 +1935,7 @@ var pagesRoutes = [
             { path: 'graficas1', component: _graficas1_graficas1_component__WEBPACK_IMPORTED_MODULE_4__["Graficas1Component"] },
             { path: 'crm', component: _crm_crm_component__WEBPACK_IMPORTED_MODULE_5__["CrmComponent"] },
             { path: 'calendario', component: _calendario_calendario_component__WEBPACK_IMPORTED_MODULE_6__["CalendarioComponent"] },
+            { path: 'colaboradores', component: _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_7__["UsuariosComponent"] },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         ]
     },
@@ -1972,6 +1991,69 @@ var ProgressComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], ProgressComponent);
     return ProgressComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/usuarios/usuarios.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/pages/usuarios/usuarios.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n/* Paleta de colores */\r\n.paleta-de-colores{\r\n    color: #278395;\r\n    color: #2e9bb0;\r\n    color: #caebf1;\r\n    color: #f6f6f6;\r\n}\r\n*{\r\n    color: #278395;\r\n}\r\nul{\r\n}\r\nli{\r\n    list-style: none;\r\n\r\n    \r\n}\r\n.small{\r\n    line-height: 80%;\r\n    font-size:80%;\r\n    /* font-weight:400; */\r\n}\r\ndiv.v-center{\r\n    /* display: flex; */\r\n    /* align-items: center; */\r\n    /* height: 50px; */\r\n    margin:auto;\r\n}\r\nspan.linea{\r\n    display: block;\r\n    width: 100%;\r\n    -ms-grid-row-align: center;\r\n        align-self: center\r\n\r\n}\r\n.img-profile{\r\n    width:50px;\r\n    border-radius: 100%;\r\n\r\n    margin-top: 50%;\r\n    margin-bottom: 50%;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/pages/usuarios/usuarios.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/pages/usuarios/usuarios.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n\n  <div class=\"row\">\n\n      <h1>Empleados</h1>\n\n  </div>\n\n  <div class=\"row\">\n\n    <div class=\"col col-md-3\">\n      \n      <ul class=\"p-0\">\n        <li>\n          <div class=\"row\">\n            \n            <div class=\"col col-md-3 p-0\">\n              <img src=\"/src/assets/images/users/1.jpg\" class=\"img-profile left\">\n            </div>\n  \n            <div class=\"col col-md-9 v-center p-0\">\n              <span class=\"linea\">Michelle Felix</span>\n              <span class=\"linea small\">Consultor</span>\n  \n            </div>\n  \n          </div>\n        </li>\n      </ul>\n\n    </div>\n\n    <div class=\"col col-md-9\">\n      Hola\n    </div>\n\n\n  </div>\n\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/usuarios/usuarios.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/pages/usuarios/usuarios.component.ts ***!
+  \******************************************************/
+/*! exports provided: UsuariosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsuariosComponent", function() { return UsuariosComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UsuariosComponent = /** @class */ (function () {
+    function UsuariosComponent() {
+    }
+    UsuariosComponent.prototype.ngOnInit = function () {
+    };
+    UsuariosComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-usuarios',
+            template: __webpack_require__(/*! ./usuarios.component.html */ "./src/app/pages/usuarios/usuarios.component.html"),
+            styles: [__webpack_require__(/*! ./usuarios.component.css */ "./src/app/pages/usuarios/usuarios.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UsuariosComponent);
+    return UsuariosComponent;
 }());
 
 
@@ -2165,6 +2247,57 @@ var SidebarService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SidebarService);
     return SidebarService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/usuarios/usuario.service.ts":
+/*!******************************************************!*\
+  !*** ./src/app/services/usuarios/usuario.service.ts ***!
+  \******************************************************/
+/*! exports provided: UsuarioService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsuarioService", function() { return UsuarioService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var UsuarioService = /** @class */ (function () {
+    function UsuarioService(http) {
+        this.http = http;
+    }
+    UsuarioService.prototype.login = function (usuario, recordar) {
+        if (recordar === void 0) { recordar = false; }
+        var url = _config_config__WEBPACK_IMPORTED_MODULE_2__["URL_SERVICIOS"] + '/login';
+        return this.http.post(url, usuario);
+    };
+    UsuarioService.prototype.crearUsuario = function (usuario) {
+        var url = _config_config__WEBPACK_IMPORTED_MODULE_2__["URL_SERVICIOS"] + '/usuario';
+        return this.http.post(url, usuario);
+    };
+    UsuarioService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], UsuarioService);
+    return UsuarioService;
 }());
 
 
