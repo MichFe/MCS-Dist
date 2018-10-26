@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n\n\n\n        @media screen {\n    #printSection {\n        display: none;\n    }\n}\n\n\n\n        @media print {\n    body * {\n        visibility:hidden;\n    }\n    #printSection, #printSection * {\n        visibility:visible;\n    }\n    #printSection {\n        position:absolute;\n        left:0;\n        top:0;\n    }\n}"
+module.exports = "/* You can add global styles to this file, and also import other style files */\n\n\n\n        @media screen {\n    #printSection {\n        display: none;\n    }\n\n    .pointer{\n        cursor: pointer;\n    }\n}\n\n\n\n        @media print {\n    body * {\n        visibility:hidden;\n    }\n    #printSection, #printSection * {\n        visibility:visible;\n    }\n    #printSection {\n        position:absolute;\n        left:0;\n        top:0;\n    }\n}"
 
 /***/ }),
 

@@ -178,7 +178,10 @@ var APP_ROUTES = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].fo
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "URL_SERVICIOS", function() { return URL_SERVICIOS; });
+//URL Producción
 var URL_SERVICIOS = 'https://api.moblacore.com';
+//URL Development
+// export const URL_SERVICIOS = "http://localhost:3000";
 
 
 /***/ }),
@@ -201,7 +204,7 @@ module.exports = "/*\nTemplate Name: Admin pro Admin\nAuthor: Wrappixel\nEmail: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- ============================================================== -->\n<!-- Main wrapper - style you can find in pages.scss -->\n<!-- ============================================================== -->\n\n<!-- ============================================================== -->\n<!-- Imagen de background para el Login -->\n<!-- ============================================================== -->\n<section id=\"wrapper\" \n         class=\"login-register login-sidebar\" \n         style=\"background-image:url(assets/images/background/login-register.jpg);\">\n<!-- ============================================================== -->\n<!-- FIN de Imagen de background para el Login -->\n<!-- ============================================================== -->\n \n  <div class=\"login-box card\">\n    <div class=\"card-body\">\n      \n      <!-- ============================================================== -->\n      <!-- Logo de la empresa para el Login -->\n      <!-- ============================================================== -->\n      <div class=\"text-center p-t-20\">\n        <img\n            class=\"logo\"\n            src=\"assets/images/mobla-logo.png\" alt=\"Home\">\n      </div>\n      <!-- ============================================================== -->\n      <!-- FIN de Logo de la empresa para el Login -->\n      <!-- ============================================================== -->\n\n      <!-- ============================================================== -->\n      <!-- Formulario de login -->\n      <!-- ============================================================== -->\n      <form ngNativeValidate \n            #forma=\"ngForm\" \n            class=\"form-horizontal form-material\" \n            (ngSubmit)=\"login( forma )\" \n            id=\"loginform\" \n            action=\"index.html\">\n        \n        <!-- ============================================================== -->\n        <!-- Campo email del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group m-t-40\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" \n                   type=\"email\"\n                   placeholder=\"Correo del usuario\" \n                   required\n                   ngModel\n                   name=\"email\">\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Campo email del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Campo contraseña del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\"\n                   type=\"password\" \n                   placeholder=\"Contraseña\" \n                   required\n                   ngModel\n                   name=\"password\">\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Campo contraseña del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Check box para recordar contraseña -->\n        <!-- ============================================================== -->\n        <div class=\"form-group row\">\n          <div class=\"col-md-12\">\n\n            <div class=\"checkbox checkbox-primary pull-left p-t-0\">\n              <input id=\"checkbox-signup\" \n                     type=\"checkbox\" \n                     class=\"filled-in chk-col-light-blue\"\n                     [(ngModel)]=\"recordarPassword\"\n                     name=\"recordarPassword\">\n              <label for=\"checkbox-signup\"> Recordarme </label>\n            </div>\n\n            <a href=\"javascript:void(0)\" id=\"to-recover\" class=\"text-dark pull-right\">\n              <i class=\"fa fa-lock m-r-5\"></i> \n              Olvidó su contraseña?</a>\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Check box para recordar contraseña -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Botón submit del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-info btn-lg btn-block text-uppercase btn-rounded btn-mobla\" \n                    type=\"submit\">Log In</button>\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Botón submit del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- <div class=\"form-group m-b-0\">\n          <div class=\"col-sm-12 text-center\">\n            Aún no tiene una cuenta? <a href=\"pages-register2.html\" class=\"text-primary m-l-5\"><b>Registrarse</b></a>\n          </div>\n        </div> -->\n      \n      </form>\n      <!-- ============================================================== -->\n      <!-- FIN de Formulario de login -->\n      <!-- ============================================================== -->\n\n      <form class=\"form-horizontal\" id=\"recoverform\" action=\"index.html\">\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <h3>Recuperar Contraseña</h3>\n            <p class=\"text-muted\">Ingresa tu Email y te enviaremos las instrucciones!</p>\n          </div>\n        </div>\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"text\" required=\"\" placeholder=\"Email\">\n          </div>\n        </div>\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light\" type=\"submit\">Reset</button>\n          </div>\n        </div>\n      </form>\n\n    </div>\n  </div>\n</section>\n<!-- ============================================================== -->\n<!-- End Wrapper -->\n<!-- ============================================================== -->"
+module.exports = "<!-- ============================================================== -->\n<!-- Main wrapper - style you can find in pages.scss -->\n<!-- ============================================================== -->\n\n<!-- ============================================================== -->\n<!-- Imagen de background para el Login -->\n<!-- ============================================================== -->\n<section id=\"wrapper\" \n         class=\"login-register login-sidebar\" \n         style=\"background-image:url(assets/images/background/login-register.jpg);\">\n<!-- ============================================================== -->\n<!-- FIN de Imagen de background para el Login -->\n<!-- ============================================================== -->\n \n  <div class=\"login-box card\">\n    <div class=\"card-body\">\n      \n      <!-- ============================================================== -->\n      <!-- Logo de la empresa para el Login -->\n      <!-- ============================================================== -->\n      <div class=\"text-center p-t-20\">\n        <img\n            class=\"logo\"\n            src=\"assets/images/mobla-logo.png\" alt=\"Home\">\n      </div>\n      <!-- ============================================================== -->\n      <!-- FIN de Logo de la empresa para el Login -->\n      <!-- ============================================================== -->\n\n      <!-- ============================================================== -->\n      <!-- Formulario de login -->\n      <!-- ============================================================== -->\n      <form ngNativeValidate \n            #forma=\"ngForm\" \n            class=\"form-horizontal form-material\" \n            (ngSubmit)=\"login( forma )\" \n            id=\"loginform\" \n            action=\"index.html\">\n        \n        <!-- ============================================================== -->\n        <!-- Campo email del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group m-t-40\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" \n                   type=\"email\"\n                   placeholder=\"Correo del usuario\" \n                   required\n                   [(ngModel)]=\"email\"\n                   name=\"email\">\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Campo email del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Campo contraseña del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group\">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\"\n                   type=\"password\" \n                   placeholder=\"Contraseña\" \n                   required\n                   ngModel\n                   name=\"password\">\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Campo contraseña del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Check box para recordar contraseña -->\n        <!-- ============================================================== -->\n        <div class=\"form-group row\">\n          <div class=\"col-md-12\">\n\n            <div class=\"checkbox checkbox-primary pull-left p-t-0\">\n              <input id=\"checkbox-signup\" \n                     type=\"checkbox\" \n                     class=\"filled-in chk-col-light-blue\"\n                     [(ngModel)]=\"recordarPassword\"\n                     name=\"recordarPassword\">\n              <label for=\"checkbox-signup\"> Recordarme </label>\n            </div>\n\n            <a href=\"javascript:void(0)\" id=\"to-recover\" class=\"text-dark pull-right\">\n              <i class=\"fa fa-lock m-r-5\"></i> \n              Olvidó su contraseña?</a>\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Check box para recordar contraseña -->\n        <!-- ============================================================== -->\n\n        <!-- ============================================================== -->\n        <!-- Botón submit del formulario -->\n        <!-- ============================================================== -->\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-info btn-lg btn-block text-uppercase btn-rounded btn-mobla\" \n                    type=\"submit\">Log In</button>\n          </div>\n        </div>\n        <!-- ============================================================== -->\n        <!-- FIN de Botón submit del formulario -->\n        <!-- ============================================================== -->\n\n        <!-- <div class=\"form-group m-b-0\">\n          <div class=\"col-sm-12 text-center\">\n            Aún no tiene una cuenta? <a href=\"pages-register2.html\" class=\"text-primary m-l-5\"><b>Registrarse</b></a>\n          </div>\n        </div> -->\n      \n      </form>\n      <!-- ============================================================== -->\n      <!-- FIN de Formulario de login -->\n      <!-- ============================================================== -->\n\n      <form class=\"form-horizontal\" id=\"recoverform\" action=\"index.html\">\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <h3>Recuperar Contraseña</h3>\n            <p class=\"text-muted\">Ingresa tu Email y te enviaremos las instrucciones!</p>\n          </div>\n        </div>\n        <div class=\"form-group \">\n          <div class=\"col-xs-12\">\n            <input class=\"form-control\" type=\"text\" required=\"\" placeholder=\"Email\">\n          </div>\n        </div>\n        <div class=\"form-group text-center m-t-20\">\n          <div class=\"col-xs-12\">\n            <button class=\"btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light\" type=\"submit\">Reset</button>\n          </div>\n        </div>\n      </form>\n\n    </div>\n  </div>\n</section>\n<!-- ============================================================== -->\n<!-- End Wrapper -->\n<!-- ============================================================== -->"
 
 /***/ }),
 
@@ -218,6 +221,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/usuarios/usuario.service */ "./src/app/services/usuarios/usuario.service.ts");
 /* harmony import */ var _models_usuario_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/usuario.model */ "./src/app/models/usuario.model.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_4__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -230,25 +236,43 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(_usuarioService) {
+    function LoginComponent(_usuarioService, router) {
         this._usuarioService = _usuarioService;
+        this.router = router;
         this.recordarPassword = false;
     }
-    LoginComponent.prototype.ngOnInit = function () { };
+    LoginComponent.prototype.ngOnInit = function () {
+        init_plugins();
+        this.email = localStorage.getItem('email') || '';
+        if (this.email.length > 1) {
+            this.recordarPassword = true;
+        }
+    };
     LoginComponent.prototype.login = function (forma) {
+        var _this = this;
         //Validando que la forma sea válida
         if (forma.invalid) {
             return;
         }
-        //
+        //---->
+        //Construyendo el objeto usuario con los valores del formulario
         var usuario = new _models_usuario_model__WEBPACK_IMPORTED_MODULE_2__["Usuario"](null, forma.value.email, forma.value.password);
+        //---->
+        // Enviando los datos de acceso a través de nuestro servicio login y recibiendo
+        // true o false dependiendo si el login fue exitoso o no
         this._usuarioService.login(usuario, forma.value.recordarPassword).
-            subscribe(function (resp) {
-            console.log(resp);
+            subscribe(function (correcto) {
+            if (correcto) {
+                _this.router.navigate(['/dashboard']);
+            }
+            else {
+                sweetalert__WEBPACK_IMPORTED_MODULE_4___default()('Login', 'El usuario o la contraseña son incorrectos', 'warning');
+            }
         });
-        console.log(forma.valid);
-        console.log(forma.value);
+        //---->
     };
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -256,7 +280,8 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_1__["UsuarioService"]])
+        __metadata("design:paramtypes", [_services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_1__["UsuarioService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -1777,6 +1802,7 @@ var PagesComponent = /** @class */ (function () {
     function PagesComponent() {
     }
     PagesComponent.prototype.ngOnInit = function () {
+        init_plugins();
     };
     PagesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1917,6 +1943,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _crm_crm_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./crm/crm.component */ "./src/app/pages/crm/crm.component.ts");
 /* harmony import */ var _calendario_calendario_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./calendario/calendario.component */ "./src/app/pages/calendario/calendario.component.ts");
 /* harmony import */ var _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
+/* harmony import */ var _services_guards_login_guard_guard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/guards/login-guard.guard */ "./src/app/services/guards/login-guard.guard.ts");
+
 
 
 
@@ -1929,6 +1957,7 @@ var pagesRoutes = [
     {
         path: '',
         component: _pages_component__WEBPACK_IMPORTED_MODULE_1__["PagesComponent"],
+        canActivate: [_services_guards_login_guard_guard__WEBPACK_IMPORTED_MODULE_8__["LoginGuardGuard"]],
         children: [
             { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_2__["DashboardComponent"] },
             { path: 'progress', component: _progress_progress_component__WEBPACK_IMPORTED_MODULE_3__["ProgressComponent"] },
@@ -2137,6 +2166,69 @@ var MesPipe = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/guards/login-guard.guard.ts":
+/*!******************************************************!*\
+  !*** ./src/app/services/guards/login-guard.guard.ts ***!
+  \******************************************************/
+/*! exports provided: LoginGuardGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginGuardGuard", function() { return LoginGuardGuard; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../usuarios/usuario.service */ "./src/app/services/usuarios/usuario.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var LoginGuardGuard = /** @class */ (function () {
+    function LoginGuardGuard(_usuarioService, router) {
+        this._usuarioService = _usuarioService;
+        this.router = router;
+    }
+    LoginGuardGuard.prototype.canActivate = function () {
+        var _this = this;
+        return this._usuarioService.validarLogin().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (resp) {
+            if (resp.ok) {
+                return true;
+            }
+            else {
+                _this.router.navigate(['/login']);
+            }
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(function (err) {
+            _this.router.navigate(['/login']);
+            // swal('Login', 'Favor de iniciar sesión','warning');
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(false);
+        }));
+    };
+    LoginGuardGuard = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_3__["UsuarioService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], LoginGuardGuard);
+    return LoginGuardGuard;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/shared.service.ts":
 /*!********************************************!*\
   !*** ./src/app/services/shared.service.ts ***!
@@ -2266,6 +2358,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2278,24 +2373,117 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
+
 var UsuarioService = /** @class */ (function () {
-    function UsuarioService(http) {
+    function UsuarioService(http, router) {
         this.http = http;
+        this.router = router;
+        this.cargarStorage();
     }
+    //------------------------
+    // Función de login
+    //------------------------
     UsuarioService.prototype.login = function (usuario, recordar) {
+        var _this = this;
         if (recordar === void 0) { recordar = false; }
-        var url = _config_config__WEBPACK_IMPORTED_MODULE_2__["URL_SERVICIOS"] + '/login';
+        //Guardamos o borramos el email del local storage, segun las preferencias del usuario
+        if (recordar) {
+            localStorage.setItem("email", usuario.email);
+        }
+        else {
+            localStorage.removeItem("email");
+        }
+        // ---->
+        //Construimos ruta del servicio
+        var url = _config_config__WEBPACK_IMPORTED_MODULE_2__["URL_SERVICIOS"] + "/login";
+        // ---->
+        // Realizamos petición de login al backend
+        return this.http.post(url, usuario).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (resp) {
+            // Guardamos los datos del usuario y su token
+            _this.guardarStorage(resp.id, resp.token, resp.usuario);
+            return true;
+            // ---->
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (err) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(false);
+        }));
+        // FIN de Petición al backend
+    };
+    //------------------------
+    // FIN de Función login
+    //------------------------
+    //---------------------------
+    // Función de logout
+    //---------------------------
+    UsuarioService.prototype.logout = function () {
+        this.usuario = null;
+        this.token = '';
+        this.id = '';
+        localStorage.removeItem('token');
+        localStorage.removeItem("id");
+        localStorage.removeItem("usuario");
+        this.router.navigate(['/login']);
+    };
+    //---------------------------
+    // Fin de Función de logout
+    //---------------------------
+    //-------------------------------------
+    // Función crear Usuario
+    //-------------------------------------
+    UsuarioService.prototype.crearUsuario = function (usuario) {
+        var url = _config_config__WEBPACK_IMPORTED_MODULE_2__["URL_SERVICIOS"] + "/usuario";
         return this.http.post(url, usuario);
     };
-    UsuarioService.prototype.crearUsuario = function (usuario) {
-        var url = _config_config__WEBPACK_IMPORTED_MODULE_2__["URL_SERVICIOS"] + '/usuario';
-        return this.http.post(url, usuario);
+    //-------------------------------------
+    // FIN de Función crear Usuario
+    //-------------------------------------
+    //------------------------------------------------------------------
+    // Función para guardar datos del usuario en localstorage
+    //------------------------------------------------------------------
+    UsuarioService.prototype.guardarStorage = function (id, token, usuario) {
+        localStorage.setItem("id", id);
+        localStorage.setItem("token", token);
+        localStorage.setItem("usuario", JSON.stringify(usuario));
+        this.usuario = usuario;
+        this.token = token;
+    };
+    //------------------------------------------------------------------
+    // FIN de Función para guardar datos del usuario en localstorage
+    //------------------------------------------------------------------
+    //-------------------------------------------------------------------------
+    // Función para cargar los datos del usuario desde el localstorage
+    //-------------------------------------------------------------------------
+    UsuarioService.prototype.cargarStorage = function () {
+        if (localStorage.getItem("token")) {
+            this.token = localStorage.getItem("token");
+            this.usuario = JSON.parse(localStorage.getItem("usuario"));
+            this.id = localStorage.getItem("id");
+        }
+        else {
+            this.token = "";
+            this.usuario = null;
+            this.id = "";
+        }
+    };
+    //-------------------------------------------------------------------------
+    // FIN de Función para cargar los datos del usuario desde el localstorage
+    //-------------------------------------------------------------------------
+    //--------------------------------------------------------------
+    // Función para validar si el usuario esta logueado o no
+    //--------------------------------------------------------------
+    UsuarioService.prototype.validarLogin = function () {
+        var url = _config_config__WEBPACK_IMPORTED_MODULE_2__["URL_SERVICIOS"] + "/validarToken";
+        return this.http.post(url, {
+            token: this.token
+        });
     };
     UsuarioService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
+            providedIn: "root"
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], UsuarioService);
     return UsuarioService;
 }());
@@ -2434,7 +2622,7 @@ module.exports = "img.logo{\r\n    max-height:35px;\r\n}\r\n\r\nimg.logo-text{\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- ============================================================== -->\n<!-- Topbar header - style you can find in pages.scss -->\n<!-- ============================================================== -->\n<header class=\"topbar\">\n  <nav class=\"navbar top-navbar navbar-expand-md navbar-light\">\n    <!-- ============================================================== -->\n    <!-- Logo -->\n    <!-- ============================================================== -->\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"index.html\">\n        <!-- Logo icon --><b>\n          <!--You can put here icon as well // <i class=\"wi wi-sunset\"></i> //-->\n          <!-- Dark Logo icon -->\n          <img src=\"assets/images/mobla-logo-letra.PNG\" alt=\"homepage\" class=\"logo dark-logo\" />\n          <!-- Light Logo icon -->\n          <img src=\"assets/images/mobla-logo-letra.PNG\" alt=\"homepage\" class=\"logo light-logo\" />\n        </b>\n        <!--End Logo icon -->\n        <!-- Logo text --><span>\n          <!-- dark Logo text -->\n          <img src=\"assets/images/mobla-logo.png\" alt=\"homepage\" class=\"logo logo-text dark-logo\" />\n          <!-- Light Logo text -->\n          <img src=\"assets/images/mobla-logo.png\" class=\"logo logo-text light-logo\" alt=\"homepage\" /></span> </a>\n    </div>\n    <!-- ============================================================== -->\n    <!-- End Logo -->\n    <!-- ============================================================== -->\n    <div class=\"navbar-collapse\">\n      <!-- ============================================================== -->\n      <!-- toggle and nav items -->\n      <!-- ============================================================== -->\n      <ul class=\"navbar-nav mr-auto\">\n        <!-- This is  -->\n        <li class=\"nav-item\"> <a class=\"nav-link nav-toggler hidden-md-up waves-effect waves-dark\" href=\"javascript:void(0)\"><i\n              class=\"ti-menu\"></i></a> </li>\n        <li class=\"nav-item\"> <a class=\"nav-link sidebartoggler hidden-sm-down waves-effect waves-dark\" href=\"javascript:void(0)\"><i\n              class=\"ti-menu\"></i></a> </li>\n        <li class=\"nav-item hidden-sm-down\"></li>\n      </ul>\n      <!-- ============================================================== -->\n      <!-- User profile and search -->\n      <!-- ============================================================== -->\n      <ul class=\"navbar-nav my-lg-0\">\n        <!-- ============================================================== -->\n        <!-- Search -->\n        <!-- ============================================================== -->\n        <li class=\"nav-item hidden-xs-down search-box\"> <a class=\"nav-link hidden-sm-down waves-effect waves-dark\" href=\"javascript:void(0)\"><i\n              class=\"ti-search\"></i></a>\n          <form class=\"app-search\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"Search & enter\"> <a class=\"srh-btn\"><i class=\"ti-close\"></i></a>\n            </form>\n        </li>\n        <!-- ============================================================== -->\n        <!-- Messages -->\n        <!-- ============================================================== -->\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle waves-effect waves-dark\" href=\"\" id=\"2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <i class=\"mdi mdi-email\"></i>\n            <div class=\"notify\"> <span class=\"heartbit\"></span> <span class=\"point\"></span> </div>\n          </a>\n          <div class=\"dropdown-menu mailbox dropdown-menu-right animated fadeIn\" aria-labelledby=\"2\">\n            <ul>\n              <li>\n                <div class=\"drop-title\">You have 4 new messages</div>\n              </li>\n              <li>\n                <div class=\"message-center\">\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status online pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Pavan kumar</h5> <span class=\"mail-desc\">Just see the my admin!</span> <span class=\"time\">9:30\n                        AM</span> </div>\n                  </a>\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/2.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status busy pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Sonu Nigam</h5> <span class=\"mail-desc\">I've sung a song! See you at</span> <span class=\"time\">9:10\n                        AM</span> </div>\n                  </a>\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/3.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status away pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Arijit Sinh</h5> <span class=\"mail-desc\">I am a singer!</span> <span class=\"time\">9:08 AM</span>\n                      </div>\n                  </a>\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/4.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status offline pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Pavan kumar</h5> <span class=\"mail-desc\">Just see the my admin!</span> <span class=\"time\">9:02\n                        AM</span> </div>\n                  </a>\n                </div>\n              </li>\n              <li>\n                <a class=\"nav-link text-center\" href=\"javascript:void(0);\"> <strong>See all e-Mails</strong> <i class=\"fa fa-angle-right\"></i>\n                  </a>\n              </li>\n            </ul>\n          </div>\n        </li>\n        <!-- ============================================================== -->\n        <!-- End Messages -->\n        <!-- ============================================================== -->\n        <!-- ============================================================== -->\n        <!-- Language -->\n        <!-- ============================================================== -->\n        <!-- <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle waves-effect waves-dark\" href=\"\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <i class=\"flag-icon flag-icon-us\"></i></a>\n          <div class=\"dropdown-menu dropdown-menu-right animated bounceInDown\"> <a class=\"dropdown-item\" href=\"#\"><i class=\"flag-icon flag-icon-in\"></i>\n              India</a> <a class=\"dropdown-item\" href=\"#\"><i class=\"flag-icon flag-icon-fr\"></i> French</a> <a class=\"dropdown-item\"\n              href=\"#\"><i class=\"flag-icon flag-icon-cn\"></i> China</a> <a class=\"dropdown-item\" href=\"#\"><i class=\"flag-icon flag-icon-de\"></i>\n              Dutch</a> </div>\n        </li> -->\n        <!-- ============================================================== -->\n        <!-- Profile -->\n        <!-- ============================================================== -->\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle waves-effect waves-dark\" href=\"\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><img\n              src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic\" /></a>\n          <div class=\"dropdown-menu dropdown-menu-right animated fadeIn\">\n            <ul class=\"dropdown-user\">\n              <li>\n                <div class=\"dw-user-box\">\n                  <div class=\"u-img\"><img src=\"assets/images/users/1.jpg\" alt=\"user\"></div>\n                  <div class=\"u-text\">\n                    <h4>Steave Jobs</h4>\n                    <p class=\"text-muted\">varun@gmail.com</p><a href=\"pages-profile.html\" class=\"btn btn-rounded btn-danger btn-sm\">View\n                      Profile</a></div>\n                </div>\n              </li>\n              <li role=\"separator\" class=\"divider\"></li>\n              <li><a href=\"#\"><i class=\"ti-user\"></i> My Profile</a></li>\n              <li><a href=\"#\"><i class=\"ti-wallet\"></i> My Balance</a></li>\n              <li><a href=\"#\"><i class=\"ti-email\"></i> Inbox</a></li>\n              <li role=\"separator\" class=\"divider\"></li>\n              <li><a href=\"#\"><i class=\"ti-settings\"></i> Account Setting</a></li>\n              <li role=\"separator\" class=\"divider\"></li>\n              <li><a href=\"#\"><i class=\"fa fa-power-off\"></i> Logout</a></li>\n            </ul>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </nav>\n</header>\n<!-- ============================================================== -->\n<!-- End Topbar header -->\n<!-- ============================================================== -->"
+module.exports = "<!-- ============================================================== -->\n<!-- Topbar header - style you can find in pages.scss -->\n<!-- ============================================================== -->\n<header class=\"topbar\">\n  <nav class=\"navbar top-navbar navbar-expand-md navbar-light\">\n    <!-- ============================================================== -->\n    <!-- Logo -->\n    <!-- ============================================================== -->\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"index.html\">\n        <!-- Logo icon --><b>\n          <!--You can put here icon as well // <i class=\"wi wi-sunset\"></i> //-->\n          <!-- Dark Logo icon -->\n          <img src=\"assets/images/mobla-logo-letra.PNG\" alt=\"homepage\" class=\"logo dark-logo\" />\n          <!-- Light Logo icon -->\n          <img src=\"assets/images/mobla-logo-letra.PNG\" alt=\"homepage\" class=\"logo light-logo\" />\n        </b>\n        <!--End Logo icon -->\n        <!-- Logo text --><span>\n          <!-- dark Logo text -->\n          <img src=\"assets/images/mobla-logo.png\" alt=\"homepage\" class=\"logo logo-text dark-logo\" />\n          <!-- Light Logo text -->\n          <img src=\"assets/images/mobla-logo.png\" class=\"logo logo-text light-logo\" alt=\"homepage\" /></span> </a>\n    </div>\n    <!-- ============================================================== -->\n    <!-- End Logo -->\n    <!-- ============================================================== -->\n    <div class=\"navbar-collapse\">\n      <!-- ============================================================== -->\n      <!-- toggle and nav items -->\n      <!-- ============================================================== -->\n      <ul class=\"navbar-nav mr-auto\">\n        <!-- This is  -->\n        <li class=\"nav-item\"> <a class=\"nav-link nav-toggler hidden-md-up waves-effect waves-dark\" href=\"javascript:void(0)\"><i\n              class=\"ti-menu\"></i></a> </li>\n        <li class=\"nav-item\"> <a class=\"nav-link sidebartoggler hidden-sm-down waves-effect waves-dark\" href=\"javascript:void(0)\"><i\n              class=\"ti-menu\"></i></a> </li>\n        <li class=\"nav-item hidden-sm-down\"></li>\n      </ul>\n      <!-- ============================================================== -->\n      <!-- User profile and search -->\n      <!-- ============================================================== -->\n      <ul class=\"navbar-nav my-lg-0\">\n        <!-- ============================================================== -->\n        <!-- Search -->\n        <!-- ============================================================== -->\n        <li class=\"nav-item hidden-xs-down search-box\"> <a class=\"nav-link hidden-sm-down waves-effect waves-dark\" href=\"javascript:void(0)\"><i\n              class=\"ti-search\"></i></a>\n          <form class=\"app-search\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"Search & enter\"> <a class=\"srh-btn\"><i class=\"ti-close\"></i></a>\n            </form>\n        </li>\n        <!-- ============================================================== -->\n        <!-- Messages -->\n        <!-- ============================================================== -->\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle waves-effect waves-dark\" href=\"\" id=\"2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <i class=\"mdi mdi-email\"></i>\n            <div class=\"notify\"> <span class=\"heartbit\"></span> <span class=\"point\"></span> </div>\n          </a>\n          <div class=\"dropdown-menu mailbox dropdown-menu-right animated fadeIn\" aria-labelledby=\"2\">\n            <ul>\n              <li>\n                <div class=\"drop-title\">You have 4 new messages</div>\n              </li>\n              <li>\n                <div class=\"message-center\">\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status online pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Pavan kumar</h5> <span class=\"mail-desc\">Just see the my admin!</span> <span class=\"time\">9:30\n                        AM</span> </div>\n                  </a>\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/2.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status busy pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Sonu Nigam</h5> <span class=\"mail-desc\">I've sung a song! See you at</span> <span class=\"time\">9:10\n                        AM</span> </div>\n                  </a>\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/3.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status away pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Arijit Sinh</h5> <span class=\"mail-desc\">I am a singer!</span> <span class=\"time\">9:08 AM</span>\n                      </div>\n                  </a>\n                  <!-- Message -->\n                  <a href=\"#\">\n                    <div class=\"user-img\"> <img src=\"assets/images/users/4.jpg\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status offline pull-right\"></span>\n                      </div>\n                    <div class=\"mail-contnet\">\n                      <h5>Pavan kumar</h5> <span class=\"mail-desc\">Just see the my admin!</span> <span class=\"time\">9:02\n                        AM</span> </div>\n                  </a>\n                </div>\n              </li>\n              <li>\n                <a class=\"nav-link text-center\" href=\"javascript:void(0);\"> <strong>See all e-Mails</strong> <i class=\"fa fa-angle-right\"></i>\n                  </a>\n              </li>\n            </ul>\n          </div>\n        </li>\n        <!-- ============================================================== -->\n        <!-- End Messages -->\n        <!-- ============================================================== -->\n        <!-- ============================================================== -->\n        <!-- Language -->\n        <!-- ============================================================== -->\n        <!-- <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle waves-effect waves-dark\" href=\"\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <i class=\"flag-icon flag-icon-us\"></i></a>\n          <div class=\"dropdown-menu dropdown-menu-right animated bounceInDown\"> <a class=\"dropdown-item\" href=\"#\"><i class=\"flag-icon flag-icon-in\"></i>\n              India</a> <a class=\"dropdown-item\" href=\"#\"><i class=\"flag-icon flag-icon-fr\"></i> French</a> <a class=\"dropdown-item\"\n              href=\"#\"><i class=\"flag-icon flag-icon-cn\"></i> China</a> <a class=\"dropdown-item\" href=\"#\"><i class=\"flag-icon flag-icon-de\"></i>\n              Dutch</a> </div>\n        </li> -->\n        <!-- ============================================================== -->\n        <!-- Profile -->\n        <!-- ============================================================== -->\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle waves-effect waves-dark\" href=\"\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"><img\n              src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic\" /></a>\n          <div class=\"dropdown-menu dropdown-menu-right animated fadeIn\">\n            <ul class=\"dropdown-user\">\n              <li>\n                <div class=\"dw-user-box\">\n                  <div class=\"u-img\"><img src=\"assets/images/users/1.jpg\" alt=\"user\"></div>\n                  <div class=\"u-text\">\n                    <h4>Steave Jobs</h4>\n                    <p class=\"text-muted\">varun@gmail.com</p><a href=\"pages-profile.html\" class=\"btn btn-rounded btn-danger btn-sm\">View\n                      Profile</a></div>\n                </div>\n              </li>\n              <li role=\"separator\" class=\"divider\"></li>\n              <li><a href=\"#\"><i class=\"ti-user\"></i> My Profile</a></li>\n              <li><a href=\"#\"><i class=\"ti-wallet\"></i> My Balance</a></li>\n              <li><a href=\"#\"><i class=\"ti-email\"></i> Inbox</a></li>\n              <li role=\"separator\" class=\"divider\"></li>\n              <li><a href=\"#\"><i class=\"ti-settings\"></i> Account Setting</a></li>\n              <li role=\"separator\" class=\"divider\"></li>\n              <li><a (click)=\"logout()\" class=\"pointer\"><i class=\"fa fa-power-off\"></i> Logout</a></li>\n            </ul>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </nav>\n</header>\n<!-- ============================================================== -->\n<!-- End Topbar header -->\n<!-- ============================================================== -->"
 
 /***/ }),
 
@@ -2449,6 +2637,7 @@ module.exports = "<!-- =========================================================
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/usuarios/usuario.service */ "./src/app/services/usuarios/usuario.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2459,17 +2648,22 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
+    function HeaderComponent(_usuarioService) {
+        this._usuarioService = _usuarioService;
     }
     HeaderComponent.prototype.ngOnInit = function () { };
+    HeaderComponent.prototype.logout = function () {
+        this._usuarioService.logout();
+    };
     HeaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "app-header",
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/shared/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/shared/header/header.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_1__["UsuarioService"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -2597,7 +2791,7 @@ var SharedModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- ============================================================== -->\n<!-- Left Sidebar - style you can find in sidebar.scss  -->\n<!-- ============================================================== -->\n<aside class=\"left-sidebar\">\n  <!-- Sidebar scroll-->\n  <div class=\"scroll-sidebar\">\n    <!-- Sidebar navigation-->\n    <nav class=\"sidebar-nav\">\n      <ul id=\"sidebarnav\">\n        <li class=\"user-profile\">\n          <a class=\"has-arrow waves-effect waves-dark\" href=\"#\" aria-expanded=\"false\"><img src=\"assets/images/users/profile.png\"\n              alt=\"user\" /><span class=\"hide-menu\">Steave Jobs </span></a>\n          <ul aria-expanded=\"false\" class=\"collapse\">\n            <li><a href=\"javascript:void()\">My Profile </a></li>\n            <li><a href=\"javascript:void()\">My Balance</a></li>\n            <li><a href=\"javascript:void()\">Inbox</a></li>\n            <li><a href=\"javascript:void()\">Account Setting</a></li>\n            <li><a href=\"javascript:void()\">Logout</a></li>\n          </ul>\n        </li>\n        <li class=\"nav-devider\"></li>\n        <li class=\"nav-small-cap\">MODULOS</li>\n\n        <li *ngFor=\"let menu of _sidebar.menu\"> \n          <a class=\"has-arrow waves-effect waves-dark\" aria-expanded=\"false\"><i [class]=\"menu.icono\"></i><span\n              class=\"hide-menu\">{{ menu.modulo }} <span class=\"label label-rouded label-themecolor pull-right\">{{ menu.submenu.length }}</span></span></a>\n          <ul aria-expanded=\"false\" class=\"collapse\">\n            <li *ngFor=\"let submenu of menu.submenu\">\n              <a [routerLink]=\"[ submenu.url ]\" routerLinkActive=\"active\">{{ submenu.titulo }}</a></li>\n          </ul>\n        </li>\n      </ul>\n    </nav>\n    <!-- End Sidebar navigation -->\n  </div>\n  <!-- End Sidebar scroll-->\n</aside>\n<!-- ============================================================== -->\n<!-- End Left Sidebar - style you can find in sidebar.scss  -->\n<!-- ============================================================== -->"
+module.exports = "<!-- ============================================================== -->\n<!-- Left Sidebar - style you can find in sidebar.scss  -->\n<!-- ============================================================== -->\n<aside class=\"left-sidebar\">\n  <!-- Sidebar scroll-->\n  <div class=\"scroll-sidebar\">\n    <!-- Sidebar navigation-->\n    <nav class=\"sidebar-nav\">\n      <ul id=\"sidebarnav\">\n        <li class=\"user-profile\">\n          <a class=\"has-arrow waves-effect waves-dark\" href=\"#\" aria-expanded=\"false\"><img src=\"assets/images/users/profile.png\"\n              alt=\"user\" /><span class=\"hide-menu\">Steave Jobs </span></a>\n          <ul aria-expanded=\"false\" class=\"collapse\">\n            <li><a href=\"javascript:void()\">My Profile </a></li>\n            <li><a href=\"javascript:void()\">My Balance</a></li>\n            <li><a href=\"javascript:void()\">Inbox</a></li>\n            <li><a href=\"javascript:void()\">Account Setting</a></li>\n            <li><a (click)=\"logout()\" class=\"pointer\">Logout</a></li>\n          </ul>\n        </li>\n        <li class=\"nav-devider\"></li>\n        <li class=\"nav-small-cap\">MODULOS</li>\n\n        <li *ngFor=\"let menu of _sidebar.menu\"> \n          <a class=\"has-arrow waves-effect waves-dark\" aria-expanded=\"false\"><i [class]=\"menu.icono\"></i><span\n              class=\"hide-menu\">{{ menu.modulo }} <span class=\"label label-rouded label-themecolor pull-right\">{{ menu.submenu.length }}</span></span></a>\n          <ul aria-expanded=\"false\" class=\"collapse\">\n            <li *ngFor=\"let submenu of menu.submenu\">\n              <a [routerLink]=\"[ submenu.url ]\" routerLinkActive=\"active\" (click)=\"expandCollapsSidebar()\">{{ submenu.titulo }}</a></li>\n          </ul>\n        </li>\n      </ul>\n    </nav>\n    <!-- End Sidebar navigation -->\n  </div>\n  <!-- End Sidebar scroll-->\n</aside>\n<!-- ============================================================== -->\n<!-- End Left Sidebar - style you can find in sidebar.scss  -->\n<!-- ============================================================== -->"
 
 /***/ }),
 
@@ -2613,6 +2807,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SidebarComponent", function() { return SidebarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_sidebar_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/sidebar.service */ "./src/app/services/sidebar.service.ts");
+/* harmony import */ var _services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/usuarios/usuario.service */ "./src/app/services/usuarios/usuario.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2624,11 +2819,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var SidebarComponent = /** @class */ (function () {
-    function SidebarComponent(_sidebar) {
+    function SidebarComponent(_sidebar, _usuarioService) {
         this._sidebar = _sidebar;
+        this._usuarioService = _usuarioService;
     }
     SidebarComponent.prototype.ngOnInit = function () {
+    };
+    SidebarComponent.prototype.logout = function () {
+        this._usuarioService.logout();
+    };
+    SidebarComponent.prototype.expandCollapsSidebar = function () {
+        if (window.innerWidth <= 600 && window.innerHeight <= 800) {
+            toggleSidebar();
+        }
     };
     SidebarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2636,7 +2841,8 @@ var SidebarComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sidebar.component.html */ "./src/app/shared/sidebar/sidebar.component.html"),
             styles: []
         }),
-        __metadata("design:paramtypes", [_services_sidebar_service__WEBPACK_IMPORTED_MODULE_1__["SidebarService"]])
+        __metadata("design:paramtypes", [_services_sidebar_service__WEBPACK_IMPORTED_MODULE_1__["SidebarService"],
+            _services_usuarios_usuario_service__WEBPACK_IMPORTED_MODULE_2__["UsuarioService"]])
     ], SidebarComponent);
     return SidebarComponent;
 }());
