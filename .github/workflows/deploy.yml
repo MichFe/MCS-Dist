@@ -11,14 +11,19 @@ on:
 # Workflow jobs
 jobs:
   deploy:
+    environment: VPS_KEY
+    env: 
+      HOST: ${{ secrets.MY_VPS_HOST }}
+      KEY: ${{ secrets.MY_VPS_KEY }}
+      USER: ${{ secrets.MY_VPS_USER }}
     runs-on: ubuntu-latest
     steps:
       - name: deploy
         uses: appleboy/ssh-action@v0.1.2
         with:
-          host: ${{ secrets.MY_VPS_HOST }}
-          key: ${{ secrets.MY_VPS_KEY }}
-          username: ${{ secrets.MY_VPS_USER }}
+          host: ${{ env.HOST }}
+          key: ${{ env.KEY }}
+          username: ${{ env.USER }}
         
           script: |
             echo user: ${{ secrets.My_VPS_USER }}
