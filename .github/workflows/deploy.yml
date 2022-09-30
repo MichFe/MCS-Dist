@@ -21,6 +21,7 @@ jobs:
           username: ${{ secrets.MY_VPS_USER }}
         
           script: |
+            echo user: ${{ secrets.My_VPS_USER }}
             cd /var/www/moblacore.com/
             git pull
             echo 'deploy to Digital Ocean completed'
