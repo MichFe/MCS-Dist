@@ -13,14 +13,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: deploy
-      uses: appleboy/ssh-action@v0.1.2
-      with:
-        host: ${{ secrets.MY_VPS_HOST }}
-        key: ${{ secrets.MY_VPS_KEY }}
-        username: ${{ secrets.MY_VPS_USER }}
+      - name: deploy
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{ secrets.MY_VPS_HOST }}
+          key: ${{ secrets.MY_VPS_KEY }}
+          username: ${{ secrets.MY_VPS_USER }}
         
-        script: |
-          cd /var/www/moblacore.com/
-          git pull
-          echo 'deploy to Digital Ocean completed'
+          script: |
+            cd /var/www/moblacore.com/
+            git pull
+            echo 'deploy to Digital Ocean completed'
