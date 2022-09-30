@@ -16,9 +16,9 @@ jobs:
       - name: deploy
         uses: appleboy/ssh-action@v0.1.2
         with:
-          host: ${{ env.MY_VPS_HOST }}
-          key: ${{ env.MY_VPS_KEY }}
-          username: ${{ env.MY_VPS_USER }}
+          host: ${{ secrets.MY_VPS_HOST }}
+          key: ${{ secrets.MY_VPS_KEY }}
+          username: ${{ secrets.MY_VPS_USER }}
         
           script: |
             cd /var/www/moblacore.com/
