@@ -114,10 +114,10 @@ $(function() {
     // ============================================================== 
     // Sidebarmenu
     // ============================================================== 
-    $(function() {
-        $('#sidebarnav').AdminMenu();
-    });
-
+    // $(function() {
+    //     $('#sidebarnav').AdminMenu();
+    // });
+    //
     // ============================================================== 
     // Perfact scrollbar
     // ============================================================== 
@@ -159,6 +159,12 @@ $(function() {
 
 });
 
+}
+
+function init_sidebar_menu() {
+  $(function() {
+    $('#sidebarnav').AdminMenu().init();
+  });
 }
 
 function toggleSidebar(){
