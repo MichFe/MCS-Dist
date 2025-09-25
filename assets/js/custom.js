@@ -45,15 +45,18 @@ $(function() {
     // Theme options
     // ==============================================================     
     $(".sidebartoggler").on('click', function() {
+      console.log("clicked");
         if ($("body").hasClass("mini-sidebar")) {
             $("body").trigger("resize");
             $("body").removeClass("mini-sidebar");
             $('.navbar-brand span').show();
+            $('.navbar-header .navbar-brand b').hide();
             
         } else {
             $("body").trigger("resize");
             $("body").addClass("mini-sidebar");
             $('.navbar-brand span').hide();
+            $('.navbar-header .navbar-brand b').show();
             
         }
     });
